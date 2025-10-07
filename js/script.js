@@ -59,6 +59,7 @@ document.addEventListener('keydown', (event) =>{
         resetValue()
         genererDecouragement()
     }
+    prendreLeMot()
 })
 
 function prendreLeMot() {
@@ -93,13 +94,12 @@ function ajouterLeMot(motAffiche) {
 }
 
 function verifierLeMot() {
-    if (motEntre == motAffiche) {
+    if (motEntre == motAffiche){
         console.log("Bien joué")
         score(1)
         nombreHasard(motsFrancais.length)
         ajouterLeMot(motAffiche)
-    }
-    else{
+    }else{
         lancementDuJeu()
     }
 }
