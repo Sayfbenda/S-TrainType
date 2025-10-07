@@ -10,7 +10,7 @@
 *{
     padding: 0;
     margin: 0;
-
+    transition: 500ms;
 }
 body > header{
     display: flex;
@@ -48,6 +48,7 @@ fieldset{
 main > section:nth-child(1) > article > fieldset{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: fit-content;
 }
 main > section:nth-child(1) > article {
@@ -100,6 +101,12 @@ main > section:nth-child(2) > article > section > article{
     border: 1px solid #1d1d1d;
     padding: 2rem;
     width: 20vw;
+}
+#barprogression{
+    display: flex;
+    background-color: white;
+    height: 10px;
+    border-radius: 1rem;
 }
 footer{
     color: white;

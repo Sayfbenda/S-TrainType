@@ -46,8 +46,11 @@ let motAffiche = ""
 let motEntre = ""
 let scoreAffiche = 0
 let motEntreId = ""
-let timerAffiche = 10
+let timerAffiche = 5
 let timerhtml = ""
+let t = ""
+let barwidth = 21
+let bar = ""
 
 function nombreHasard(nombre) {
     motAffiche = motsFrancais[Math.floor(Math.random()*nombre)]
@@ -56,13 +59,17 @@ function nombreHasard(nombre) {
 
 document.addEventListener('keydown', (event) =>{
     if (event.key == "Enter") {
-        prendreLeMot()
-        verifierLeMot()
-        resetValue()
-        genererDecouragement()
+        gagneroupas()
     }
     prendreLeMot()
 })
+
+function gagneroupas() {
+    prendreLeMot()
+    verifierLeMot()
+    resetValue()
+    genererDecouragement()
+}
 
 function prendreLeMot() {
     motEntreId = document.getElementById("motmagic")
@@ -116,20 +123,41 @@ function resetValue() {
 }
 
 function timer() {
+    timerAffiche = 5
     let timerID = document.getElementById("timer")
-    const t = setInterval(() => {
+    t = setInterval(() => {
         let html = `
         <h3>${timerAffiche}</h3>
         `
         timerID.innerHTML = html
         console.log(timerAffiche --)
+        barwidth = barwidth - 4
+        bar.style.width = String(barwidth+"vw")
+        console.log(String(barwidth+"vw"))
         if (timerAffiche == -1){
             clearTimeout(t)
+            verifierTimer()
+            barprogression()
         }
 }, 1000);
 }
 
+function verifierTimer() {
+    if (timerAffiche == -1){
+        timer()
+        gagneroupas()
+    }
+}
+
+function barprogression() {
+    barwidth = 21
+    bar = document.getElementById("barprogression")
+    bar.style.width = String(barwidth+"vw")
+}
+
 function lancementDuJeu() {
+    barprogression()
+    clearTimeout(t)
     timer()
     resetScore(0)
     nombreHasard(motsFrancais.length)
