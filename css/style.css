@@ -17,6 +17,7 @@ body > header{
     justify-content: center;
 }
 body > header > nav{
+    align-items: center;
     color: white;
     position: fixed;
     display: flex;
@@ -58,13 +59,34 @@ main > section:nth-child(1) > article {
     align-items: center;
 }
 main > section:nth-child(1) > article > fieldset > h1{
-    font-size: 5rem;
+    font-size: 7rem;
     font-family: 'Arimo';
+    
 }
 input[name="motmagic"]{
     background-color: white;
     padding: 0.5rem 1rem 0.5rem 1rem ;
     border-radius: 1rem;
+}
+input[type="button"]{
+    font-family: 'Roboto';
+    padding: 1vh 1vw 1vh 1vw;
+    border-radius: 1rem;
+    color: white;
+    background-color: #1d1d1d;
+    border: 1px solid #0a0a0a;
+}
+#score{
+    font-size: 1.3rem;
+}
+#getmotmagic{
+    font-size: 1.5rem;
+}
+input[type="text"]{
+    width: 30vw;
+    background-color: #1d1d1d;
+    border: 1px solid white;
+    color: white;
 }
 main > section:nth-child(2){
     height: 75vh;
@@ -106,13 +128,51 @@ main > section:nth-child(2) > article > section > article{
     display: flex;
     background-color: white;
     height: 10px;
+    width: 21vw;
     border-radius: 1rem;
 }
 footer{
     color: white;
 }
+footer section > h3{
+    font-size: 4rem;
+}
 footer > section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 75vh;
     border-top: 1px solid #1d1d1d;
     background-color: #0a0a0a;
+}
+footer > section > div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+footer > section > div > article:nth-child(2){
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+}
+footer > section > div > article:nth-child(2) > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+footer > section > div > article:nth-child(1){
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    margin-left: 5vh;
+}
+ul{
+    list-style: none;
+}
+footer a{
+    color: white;
+    text-decoration: none;
 }

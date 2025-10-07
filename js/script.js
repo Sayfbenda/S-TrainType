@@ -97,7 +97,7 @@ function resetScore(rest) {
 function ajouterLeMot(motAffiche) {
     let divlabel = document.getElementById("getmotmagic")
     let html = `
-        <label for="motmagic">Le mot est : ${motAffiche}</label>
+        <label for="motmagic">Le mot est : <span style="color : yellow;">${motAffiche}</span></label>
     `
     divlabel.innerHTML = html
 }
