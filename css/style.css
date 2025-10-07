@@ -176,3 +176,29 @@ footer a{
     color: white;
     text-decoration: none;
 }
+@media only screen and (max-width: 320px) {
+    body{
+        background-color: #0a0a0a;
+    }
+    header{
+        visibility: hidden;
+    }
+    main > section:nth-child(2) > article > section {
+        display: flex;
+        flex-direction: column;
+    }
+    main > section:nth-child(1) > article > fieldset > h1{
+        font-size: 3em;
+}
+    main > section:nth-child(2){
+        height: fit-content;
+}
+footer > section > div{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+main > section:nth-child(2) > article > section > article{
+    width: 100%;
+}
+}
