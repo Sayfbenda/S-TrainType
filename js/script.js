@@ -46,6 +46,8 @@ let motAffiche = ""
 let motEntre = ""
 let scoreAffiche = 0
 let motEntreId = ""
+let timerAffiche = 10
+let timerhtml = ""
 
 function nombreHasard(nombre) {
     motAffiche = motsFrancais[Math.floor(Math.random()*nombre)]
@@ -113,7 +115,22 @@ function resetValue() {
     motEntreId.value = ""
 }
 
+function timer() {
+    let timerID = document.getElementById("timer")
+    const t = setInterval(() => {
+        let html = `
+        <h3>${timerAffiche}</h3>
+        `
+        timerID.innerHTML = html
+        console.log(timerAffiche --)
+        if (timerAffiche == -1){
+            clearTimeout(t)
+        }
+}, 1000);
+}
+
 function lancementDuJeu() {
+    timer()
     resetScore(0)
     nombreHasard(motsFrancais.length)
     ajouterLeMot(motAffiche)
