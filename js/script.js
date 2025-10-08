@@ -104,6 +104,8 @@ function ajouterLeMot(motAffiche) {
 
 function verifierLeMot() {
     if (motEntre == motAffiche){
+        clearTimeout(t)
+        timer()
         console.log("Bien joué")
         score(1)
         nombreHasard(motsFrancais.length)
@@ -124,6 +126,7 @@ function resetValue() {
 
 function timer() {
     timerAffiche = 5
+    barwidth = 21
     let timerID = document.getElementById("timer")
     t = setInterval(() => {
         let html = `
@@ -134,7 +137,7 @@ function timer() {
         barwidth = barwidth - 4
         bar.style.width = String(barwidth+"vw")
         console.log(String(barwidth+"vw"))
-        if (timerAffiche == -1){
+        if (timerAffiche == 0){
             clearTimeout(t)
             verifierTimer()
             barprogression()
@@ -143,7 +146,7 @@ function timer() {
 }
 
 function verifierTimer() {
-    if (timerAffiche == -1){
+    if (timerAffiche == 0){
         timer()
         gagneroupas()
     }
