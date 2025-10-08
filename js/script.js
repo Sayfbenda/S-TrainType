@@ -48,6 +48,10 @@ let motEntre = ""
 let chronometre = ""
 let bar = ""
 let motAffiche = ""
+let input = ""
+let score = 0
+let socreAffiche = ""
+let point = 1
 
 function genereUnMot() {
     let i = Math.floor(Math.random()* motsFrancais.length)
@@ -127,14 +131,18 @@ function afficherChrono(comptearebours) {
 }
 
 function reset(button) {
+    button.setAttribute("style", "visibility : visible")
+    input.innerHTML = ""
     motAffiche.innerHTML = ""
     timer.innerHTML = ""
     bar.innerHTML = ""
-    button.setAttribute("style", "visibility : visible")
+    socreAffiche.innerHTML = ""
     clearInterval(chronometre)
+    point = 1
 }
 
 function prochainRound(barwidth) {
+    afficherScore(point ++)
     clearInterval(chronometre)
     barProgressionManage(barwidth)
     genereUnMot()
@@ -142,8 +150,26 @@ function prochainRound(barwidth) {
     chrono()
 }
 
+function afficherinput() {
+    input = document.getElementById("input")
+    let html = `
+    <input type="text" style="visibility: visible;" name="motmagic" id="motmagic" autocomplete="off" placeholder="Vous allez pas y'arriver" value="">
+    ` 
+    input.innerHTML = html
+}
+
+function afficherScore(point) {
+    socreAffiche = document.getElementById("score")
+    let html = `
+    <label>${score + point}</label
+    `
+    socreAffiche.innerHTML = html
+}
+
 function lancerlejeu() {
     cacherBoutton(button)
+    afficherinput()
+    afficherScore(point)
     genereUnMot()
     afficherLeMot(motAleatoire)
     chrono()

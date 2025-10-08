@@ -201,3 +201,11 @@ main > section:nth-child(2) > article > section > article{
     width: 100%;
 }
 }
+
+main > section > article > fieldset > div > button{
+    background-color: #1d1d1d;
+    border: 1px solid gray;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
