@@ -1,32 +1,33 @@
 const motsFrancais = [
-  "chat", "chien", "maison", "pomme", "livre", "voiture", "arbre", "fleur", "soleil", "lune",
-  "ordinateur", "école", "table", "chaise", "porte", "fenêtre", "stylo", "cahier", "mer", "montagne",
-  "village", "ville", "rue", "route", "pont", "forêt", "rivière", "lac", "plage", "île",
-  "oiseau", "poisson", "cheval", "vache", "cochon", "mouton", "lion", "tigre", "éléphant", "singe",
-  "papillon", "araignée", "serpent", "requin", "dauphin", "ours", "renard", "loup", "hibou", "chaton",
-  "ballon", "vélo", "moto", "avion", "bateau", "train", "camion", "bus", "trottinette", "hélicoptère",
-  "fromage", "pain", "lait", "eau", "jus", "gâteau", "chocolat", "sucre", "sel", "poivre",
-  "ordinateur", "clavier", "souris", "écran", "imprimante", "microphone", "casque", "logiciel", "application", "internet",
-  "amour", "amitie", "joie", "tristesse", "colère", "peur", "surprise", "déception", "espoir", "confiance",
-  "philosophie", "psychologie", "sociologie", "astronomie", "biologie", "chimie", "physique", "mathématiques", "géographie", "histoire",
-  "architecture", "peinture", "sculpture", "musique", "théâtre", "danse", "cinéma", "photographie", "poésie", "littérature",
-  "algorithme", "variable", "fonction", "boucle", "condition", "objet", "tableau", "classe", "méthode", "prototype",
-  "astronaute", "cosmonaute", "galaxie", "planète", "étoile", "comète", "astéroïde", "satellite", "univers", "trou noir",
-  "développement", "programmation", "codage", "serveur", "réseau", "base de données", "interface", "application mobile", "site web", "logiciel",
-  "aventure", "exploration", "voyage", "expédition", "quête", "mission", "découverte", "invention", "innovation", "création",
-  "liberté", "égalité", "fraternité", "justice", "loi", "règle", "droit", "responsabilité", "éthique", "morale",
-  "ordinateur portable", "tablette", "smartphone", "route nationale", "autoroute", "gare", "aéroport", "port", "station", "ville",
-  "météo", "température", "pluie", "neige", "vent", "orage", "arc-en-ciel", "nuage", "soleil couchant", "éclipse",
-  "robot", "drone", "imprimante 3D", "intelligence artificielle", "machine", "engin", "dispositif", "outil", "appareil", "mécanisme",
-  "cuisine", "salade", "soupe", "pâtes", "riz", "viande", "poisson", "légumes", "fruit", "dessert",
-  "montagne russe", "parc d'attractions", "manège", "spectacle", "cinéma", "théâtre", "concert", "festival", "exposition", "musée",
-  "lettre", "journal", "magazine", "article", "roman", "poème", "conte", "biographie", "discours", "essai",
-  "chaussure", "chaussette", "pantalon", "chemise", "robe", "jupe", "chapeau", "gants", "écharpe", "manteau",
-  "santé", "médecin", "hôpital", "infirmier", "maladie", "remède", "traitement", "vaccin", "urgence", "consultation",
-  "sport", "football", "basketball", "tennis", "natation", "cyclisme", "course", "gymnastique", "ski", "randonnée",
-  "technologie", "innovation", "découverte", "science", "recherche", "expérience", "laboratoire", "données", "programme", "robotique",
-  "énergie", "solaire", "éolienne", "hydraulique", "nucléaire", "fossile", "renouvelable", "consommation", "production", "efficacité",
-  "psychologie", "sociologie", "philosophie", "anthropologie", "économie", "politique", "droit", "histoire", "géographie", "linguistique"
+  "Chat", "Chien", "Maison", "Pomme", "Livre", "Voiture", "Arbre", "Fleur", "Soleil", "Lune",
+  "École", "Table", "Chaise", "Porte", "Fenêtre", "Stylo", "Cahier", "Mer", "Montagne", "Village",
+  "Ville", "Rue", "Route", "Pont", "Forêt", "Rivière", "Lac", "Plage", "Île", "Oiseau",
+  "Poisson", "Cheval", "Vache", "Cochon", "Mouton", "Lion", "Tigre", "Éléphant", "Singe", "Papillon",
+  "Araignée", "Serpent", "Requin", "Dauphin", "Ours", "Renard", "Loup", "Hibou", "Chaton", "Ballon",
+  "Vélo", "Moto", "Avion", "Bateau", "Train", "Camion", "Bus", "Trottinette", "Hélicoptère", "Fromage",
+  "Pain", "Lait", "Eau", "Jus", "Gâteau", "Chocolat", "Sucre", "Sel", "Poivre", "Clavier",
+  "Souris", "Écran", "Imprimante", "Casque", "Application", "Internet", "Amour", "Amitié", "Joie", "Tristesse",
+  "Colère", "Peur", "Surprise", "Espoir", "Confiance", "Musique", "Danse", "Cinéma", "Théâtre", "Poésie",
+  "Roman", "Conte", "Biographie", "Discours", "Chemise", "Robe", "Jupe", "Chapeau", "Gants", "Écharpe",
+  "Médecin", "Hôpital", "Urgence", "Sport", "Football", "Basketball", "Tennis", "Natation", "Ski", "Randonnée",
+  "Bouteille", "Coccinelle", "Caméléon", "Aiguille", "Horloge", "Miroir", "Cimetière", "Grenouille", "Cerise", "Carotte",
+  "Écharpe", "Château", "Brouillard", "Fourchette", "Caniveau", "Vitrail", "Escalier", "Tambour", "Cheminée", "Écureuil",
+  "Broussaille", "Aubergine", "Mandarine", "Calendrier", "Chrysalide", "Tornade", "Tempête", "Éclair", "Orage", "Cyclone",
+  "Courage", "Beauté", "Liberté", "Fraternité", "Justice", "Égalité", "Responsabilité", "Éthique", "Morale", "Sagesse",
+  "Innovation", "Création", "Découverte", "Invention", "Expédition", "Exploration", "Mission", "Aventure", "Voyage", "Quête",
+  "Laboratoire", "Expérience", "Programme", "Algorithme", "Variable", "Boucle", "Condition", "Objet", "Classe", "Prototype",
+  "Cosmonaute", "Astronaute", "Galaxie", "Planète", "Étoile", "Comète", "Astéroïde", "Satellite", "Univers", "Trou Noir",
+  "Cuisine", "Salade", "Soupe", "Pâtes", "Riz", "Viande", "Légume", "Fruit", "Dessert", "Festival",
+  "Exposition", "Concert", "Spectacle", "Parc", "Montagne Russe", "Musée", "Article", "Magazine", "Journal", "Lettre",
+  "Chaussure", "Chaussette", "Pantalon", "Manteau", "Santé", "Maladie", "Traitement", "Vaccin", "Consultation", "Remède",
+  "Anticonstitutionnellement", "Inintelligibilité", "Dysfonctionnement", "Photosynthèse", "Électromagnétisme", "Thermodynamique", "Cryptographie",
+  "Archéologie", "Hydraulique", "Astrophysique", "Pharmacologie", "Méthodologie", "Étymologie", "Mythologie", "Technocratie", "Bureaucratie", "Pléonasme",
+  "Onomatopée", "Parallélépipède", "Ornithorynque", "Chrysantheme", "Syllogisme", "Hypoténuse", "Quadrilatère", "Polynésie", "Antarctique", "Symétriquement",
+  "Substantiellement", "Transcendantal", "Métamorphose", "Schizophrénie", "Psychothérapie", "Bioluminescence", "Mésopotamie", "Dénominateur", "Algébrique", "Hémorragie",
+  "Photosensibilité", "Intergouvernemental", "Responsabilisation", "Institutionnalisation", "Pluridisciplinaire", "Incommensurable", "Indéfectiblement", "Invraisemblance", "Hétérogénéité", "Procrastination",
+  "Synchronisation", "Disproportionné", "Caractéristique", "Météorologique", "Orthographique", "Philosophique", "Psychologique", "Sociologique", "Anthropologique", "Historiographique",
+  "Épistémologique", "Grammaticalement", "Lexicographiquement", "Phonétiquement", "Électroencéphalogramme", "Antithétiquement", "Bibliothécaire", "Chlorophylle", "Dyslexique", "Interlocuteur",
+  "Névralgique", "Orthophoniste", "Syllabaire", "Transcendance", "Ultrasonore", "Xylophoniste", "Zoologiste", "Péripétie", "Conjoncture", "Prophétie"
 ];
 
 const phrasesDecourageantes = [
@@ -42,128 +43,110 @@ const phrasesDecourageantes = [
     "Pourquoi essayer ? Vous allez juste décevoir."
 ];
 
-let motAffiche = ""
+let motAleatoire = ""
 let motEntre = ""
-let scoreAffiche = 0
-let motEntreId = ""
-let timerAffiche = 5
-let timerhtml = ""
-let t = ""
-let barwidth = 21
+let chronometre = ""
 let bar = ""
+let motAffiche = ""
 
-function nombreHasard(nombre) {
-    motAffiche = motsFrancais[Math.floor(Math.random()*nombre)]
-    console.log(motAffiche)
+function genereUnMot() {
+    let i = Math.floor(Math.random()* motsFrancais.length)
+    motAleatoire = motsFrancais[i]
+    console.log(motAleatoire)
+}
+function afficherLeMot(motAleatoire) {
+    motAffiche = document.getElementById("getmotmagic")
+    let html = `
+    <label>Entrez le mot : <span style="color : yellow;">${motAleatoire}</span></label>
+    `
+    motAffiche.innerHTML = html
+}
+
+function barProgressionManage(barwidth) {
+    bar = document.getElementById("barfieldset")
+    let html = `
+    <div id="barprogression" style="width: ${barwidth};"></div>
+    `
+    bar.innerHTML = html
+}
+
+function buttonStart() {
+    button = document.getElementById("bouttoncommencer")
+    let html = `<button onclick="lancerlejeu()">Commencer</button>`
+    button.innerHTML = html
+}
+
+function cacherBoutton(button) {
+    button.setAttribute("style", "visibility: hidden")
 }
 
 document.addEventListener('keydown', (event) =>{
-    if (event.key == "Enter") {
-        gagneroupas()
+    if (event.key == "Enter"){
+        prendreLeMot()
+        VerifierLeMot(motEntre, motAleatoire)
     }
-    prendreLeMot()
 })
 
-function gagneroupas() {
-    prendreLeMot()
-    verifierLeMot()
-    resetValue()
-    genererDecouragement()
-}
-
 function prendreLeMot() {
-    motEntreId = document.getElementById("motmagic")
-    motEntre = motEntreId.value
+    motEntre = document.getElementById("motmagic")
+    motEntre = motEntre.value
 }
 
-function score(points) {
-    let divscore = document.getElementById("score")
-    scoreAffiche += points
-    html = `
-        <h2>Votre Score est : ${scoreAffiche}</h2>
-    `
-    divscore.innerHTML = html
-}
-
-function resetScore(rest) {
-    let divscore = document.getElementById("score")
-    html = `
-        <h2>Votre Score est : ${rest}</h2>
-    `
-    divscore.innerHTML = html
-}
-
-
-function ajouterLeMot(motAffiche) {
-    let divlabel = document.getElementById("getmotmagic")
-    let html = `
-        <label for="motmagic">Le mot est : <span style="color : yellow;">${motAffiche}</span></label>
-    `
-    divlabel.innerHTML = html
-}
-
-function verifierLeMot() {
-    if (motEntre == motAffiche){
-        clearTimeout(t)
-        timer()
-        console.log("Bien joué")
-        score(1)
-        nombreHasard(motsFrancais.length)
-        ajouterLeMot(motAffiche)
+function VerifierLeMot(motEntre, motAleatoire) {
+    if (motAleatoire == motEntre){
+        prochainRound()
     }else{
-        lancementDuJeu()
+        console.log("test")
+        reset(button)
     }
 }
 
-function genererDecouragement() {
-    let motEntreId = document.getElementById("motmagic")
-    motEntreId.setAttribute("placeholder", phrasesDecourageantes[Math.floor(Math.random()*phrasesDecourageantes.length)])
-}
-
-function resetValue() {
-    motEntreId.value = ""
-}
-
-function timer() {
-    timerAffiche = 5
-    barwidth = 21
-    let timerID = document.getElementById("timer")
-    t = setInterval(() => {
-        let html = `
-        <h3>${timerAffiche}</h3>
-        `
-        timerID.innerHTML = html
-        console.log(timerAffiche --)
-        barwidth = barwidth - 4
+function chrono() {
+    let comptearebours = 5
+    let barwidth = 22
+    chronometre = setInterval(() => {
+        comptearebours --
+        afficherChrono(comptearebours)
         bar.style.width = String(barwidth+"vw")
-        console.log(String(barwidth+"vw"))
-        if (timerAffiche == 0){
-            clearTimeout(t)
-            verifierTimer()
-            barprogression()
+        barwidth -= 7
+        if (comptearebours == 0){
+            afficherChrono(comptearebours)
+            clearInterval(chronometre)
+            bar.style.width = String("0vw")
+            VerifierLeMot(motEntre, motAleatoire)
         }
-}, 1000);
+    }, 1000);
 }
 
-function verifierTimer() {
-    if (timerAffiche == 0){
-        timer()
-        gagneroupas()
-    }
+function afficherChrono(comptearebours) {
+    let timer = document.getElementById("timer")
+    let html = `
+    <label>${comptearebours}</label
+    `
+    timer.innerHTML = html
 }
 
-function barprogression() {
-    barwidth = 21
-    bar = document.getElementById("barprogression")
-    bar.style.width = String(barwidth+"vw")
+function reset(button) {
+    motAffiche.innerHTML = ""
+    timer.innerHTML = ""
+    bar.innerHTML = ""
+    button.setAttribute("style", "visibility : visible")
+    clearInterval(chronometre)
 }
 
-function lancementDuJeu() {
-    barprogression()
-    clearTimeout(t)
-    timer()
-    resetScore(0)
-    nombreHasard(motsFrancais.length)
-    ajouterLeMot(motAffiche)
+function prochainRound(barwidth) {
+    clearInterval(chronometre)
+    barProgressionManage(barwidth)
+    genereUnMot()
+    afficherLeMot(motAleatoire)
+    chrono()
 }
-lancementDuJeu()
+
+function lancerlejeu() {
+    cacherBoutton(button)
+    genereUnMot()
+    afficherLeMot(motAleatoire)
+    chrono()
+    barProgressionManage()
+}
+buttonStart()

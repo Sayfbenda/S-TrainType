@@ -10,7 +10,7 @@
 *{
     padding: 0;
     margin: 0;
-    transition: 500ms;
+    transition: 1000ms;
 }
 body > header{
     display: flex;
@@ -128,7 +128,6 @@ main > section:nth-child(2) > article > section > article{
     display: flex;
     background-color: white;
     height: 10px;
-    width: 21vw;
     border-radius: 1rem;
 }
 footer{
