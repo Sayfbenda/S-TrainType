@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --background-color : #102211;
+    --secondary-background-color : #0c1b0d;
+    
+    --color : #13ec1a;
+    --secondary-color : #104a12;
+    --title-color : #ffffff;
+    --text-color : #ced2ce;
+
+    --color-game-true : #4caf50;
+    --color-game-error : #104a12;
+    
+    --header-heigth : 5vh;
+
+    --gap : 1.5rem;
+
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: 'Outfit', sans-serif;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+body > header{
+    height: var(--header-heigth);
+}
+
+body > header > nav{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+body > header > nav > ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav > ul > ul{
+    display: flex;
+    gap: var(--gap);
+}
+
+main{
+    height: 100%;
+}
+
+main > section:nth-child(1){
+    height: calc(100vh - var(--header-heigth));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
