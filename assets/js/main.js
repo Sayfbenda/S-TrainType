@@ -39,7 +39,8 @@ function Play() {
 }
 
 function ConvertParagrapheToHtml(paragraphe) {
-    var liste = paragraphe.split(" ")
+    var liste = paragraphe.split("")
+
     for (let index = 0; index < liste.length; index++) {
         liste[index] = "<span class='remaining-text'>"+ liste[index] + "</span>"
     }
@@ -51,15 +52,25 @@ function ConvertParagrapheToHtml(paragraphe) {
 }
 
 function addEventListenerTokeyboard(paragraphe) {
+    const typingarea = document.getElementById("typing-area")
     const userinput = document.getElementById("userinput")
-    userinput.addEventListener("keydown", function(e){
-        console.log(userinput.value)
+    userinput.addEventListener("keyup", function(e){
+        console.log(e.key)
         for (let index = 0; index < userinput.value.length; index++) {
+            typingarea.children[index].classList.add("remaining-text")
             if (userinput.value[index] == paragraphe[index]) {
-                paragraphe[index] = "OEOEOEOEOEOEOEOEOEOEOEOOEOEOEO"
-                console.log(paragraphe)
+                
+                if (typingarea.children[index].classList.contains("incorrect")) {
+                    typingarea.children[index].classList.replace("incorrect", "correct")
+                }else{
+                    typingarea.children[index].classList.replace("remaining-text", "correct")
+                }
             }else{
-                console.log("faux")
+                if (typingarea.children[index].classList.contains("correct")) {
+                    typingarea.children[index].classList.replace("correct", "incorrect")
+                }else{
+                    typingarea.children[index].classList.replace("remaining-text", "incorrect")
+                }
             }
             
         }
