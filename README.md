@@ -1,35 +1,35 @@
 # ⌨️ TrainType (S-TrainType)
 
-![Statut du projet](https://img.shields.io/badge/Status-En_D%C3%A9veloppement-yellow)
+![Project Status](https://img.shields.io/badge/Status-In_Development-yellow)
 
-**TrainType** est une application web interactive conçue pour tester et améliorer votre vitesse de frappe (dactylographie). Grâce à une interface épurée et moderne, elle propose différents modes d'entraînement pour s'adapter à tous les niveaux.
+**TrainType** is an interactive web application designed to test and improve your typing speed (touch typing). Featuring a clean and modern interface, it offers different training modes to suit all skill levels.
 
-🔗 **Démo en ligne :** [https://sayfbenda.github.io/S-TrainType/](https://sayfbenda.github.io/S-TrainType/)
-
----
-
-## 🚀 Fonctionnalités
-
-### Actuellement disponible
-- **Mode Classique** : Testez votre vitesse et votre précision sur des textes standards.
-- **Indicateurs de performance** :
-  - **WPM** (Mots par minute) : Mesure votre vitesse de frappe en temps réel.
-  - **Précision** (Accuracy) : Pourcentage de réussite pour encourager une frappe sans faute.
-- **Interface Réactive** : Compatible avec les ordinateurs de bureau et tablettes.
-
-### 🚧 À venir (Roadmap)
-- **Mode Challenge** : Des défis chronométrés pour pousser vos limites.
-- **Mode Mots Ciblés** : Entraînement sur des listes de mots spécifiques ou complexes.
-- **Tutoriels pour débutants** : Leçons pour apprendre le positionnement des doigts.
-- **Suivi des progrès** : Historique et graphiques de vos performances.
-- **Personnalisation** : Thèmes et options d'affichage.
+🔗 **Live Demo:** [https://sayfbenda.github.io/S-TrainType/](https://sayfbenda.github.io/S-TrainType/)
 
 ---
 
-## 🛠️ Langages Utilisées
+## 🚀 Features
 
-Ce projet est réalisé en **Vanilla JS**, sans framework lourd, pour garantir légèreté et performance.
+### Currently Available
+* **Classic Mode**: Test your speed and accuracy using standard texts.
+* **Performance Indicators**:
+    * **WPM** (Words Per Minute): Measures your typing speed in real-time.
+    * **Accuracy**: Success percentage to encourage error-free typing.
+* **Responsive Interface**: Compatible with desktop computers and tablets.
 
-- **HTML5** : Structure sémantique de l'application.
-- **CSS3** : Mise en page moderne, animations et design responsive.
-- **JavaScript** : Logique du jeu
+### 🚧 Coming Soon (Roadmap)
+* **Challenge Mode**: Timed challenges to push your limits.
+* **Targeted Words Mode**: Training on specific or complex word lists.
+* **Beginner Tutorials**: Lessons to learn proper finger positioning.
+* **Progress Tracking**: History and graphs of your performance.
+* **Customization**: Themes and display options.
+
+---
+
+## 🛠️ Used Technologies
+
+This project is built using **Vanilla JS**, without heavy frameworks, to ensure lightness and performance.
+
+* **HTML5**: Semantic application structure.
+* **CSS3**: Modern layout, animations, and responsive design.
+* **JavaScript**: Game logic.
