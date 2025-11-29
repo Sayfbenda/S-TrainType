@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js"></script>
 </head>
 <body>
 
@@ -29,7 +30,7 @@
 
     <main id="hero-page">
         <h1 class="hero-title">TrainType</h1>
-        <a href="#discover-page" class="btn-start">
+        <a id="play-button" href="#play-page" class="btn-start">
             Commencer
         </a>
     </main>
@@ -41,16 +42,12 @@
             <div class="stats-card"><p>Accuracy</p><p>98%</p></div>
         </div>
         
-        <div class="typing-area">
-            <span class="correct">Le texte déjà tapé correctement en</span> 
-            <span class="correct">vert,</span> 
-            <span class="remaining-text">ou en rouge si incorrect. Le mot actuel à taper est en</span> 
-            <span class="current-word">blanc</span> 
-            <span class="remaining-text">vif avec un curseur clignotant. Le reste du texte à venir est en blanc plus discret.</span>
+        <div id="typing-area" class="typing-area">
+            
         </div>
         
         <div class="game-controls">
-        <input class="input-field" type="text" name="" id="" placeholder="">
+        <input class="input-field" type="text" name="" id="userinput" placeholder="">
             <button><i class="fa-solid fa-rotate-right"></i></button>
             <button><i class="fa-solid fa-gear"></i></button>
         </div>
