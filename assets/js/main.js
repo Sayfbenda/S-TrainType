@@ -34,7 +34,7 @@ function Play() {
     
     const paragraphe = GenerateRandomParagraphe()
     const htmlparagraphe = ConvertParagrapheToHtml(paragraphe)
-    DisplayParagraphe(paragraphe)
+    DisplayParagraphe(htmlparagraphe)
     addEventListenerTokeyboard(paragraphe)
 }
 

@@ -93,6 +93,12 @@
         .typing-area {
             font-size: 1.7rem; line-height: 1.6; margin-bottom: 5rem; padding: 1rem 2rem; text-align: left;
             user-select: none; outline: none; width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .typing-area > span{
+            width: fit-content;
         }
         .correct { color: var(--primary-green); font-weight: 500;}
         .incorrect { color: var(--error-red); }
