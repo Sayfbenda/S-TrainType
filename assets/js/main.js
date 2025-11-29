@@ -39,7 +39,7 @@ function Play() {
 }
 
 function ConvertParagrapheToHtml(paragraphe) {
-    var liste = paragraphe.split("")
+    var liste = ParagrapheSplited(paragraphe)
 
     for (let index = 0; index < liste.length; index++) {
         liste[index] = "<span class='remaining-text'>"+ liste[index] + "</span>"
@@ -51,11 +51,22 @@ function ConvertParagrapheToHtml(paragraphe) {
     return htmlparagraphe
 }
 
+function ParagrapheSplited(paragraphe) {
+    var liste = paragraphe.split("")
+    return liste
+}
+
 function addEventListenerTokeyboard(paragraphe) {
     const typingarea = document.getElementById("typing-area")
     const userinput = document.getElementById("userinput")
     userinput.addEventListener("keyup", function(e){
-        console.log(e.key)
+        for (let index = 0; index < typingarea.children.length; index++) {
+            if (typingarea.children[index].classList.contains("correct")) {
+                    typingarea.children[index].classList.replace("correct", "remaining-text")
+                }else if(typingarea.children[index].classList.contains("incorrect")){
+                    typingarea.children[index].classList.replace("incorrect", "remaining-text")
+                }
+        }
         for (let index = 0; index < userinput.value.length; index++) {
             typingarea.children[index].classList.add("remaining-text")
             if (userinput.value[index] == paragraphe[index]) {
@@ -77,7 +88,7 @@ function addEventListenerTokeyboard(paragraphe) {
     })
 }
 
-function SetNewParagraphe(params) {
+function WritePerMinute() {
     
 }
 
