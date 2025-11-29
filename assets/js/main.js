@@ -61,8 +61,6 @@ function addEventListenerTokeyboard(paragraphe) {
     const userinput = document.getElementById("userinput")
 
     userinput.addEventListener("keyup", function(e) {
-    let score = 0;
-    let error = 0;
 
     for (let i = userinput.value.length; i < typingarea.children.length; i++) {
         typingarea.children[i].classList.remove("correct", "incorrect");
@@ -78,15 +76,19 @@ function addEventListenerTokeyboard(paragraphe) {
 
         if (typedChar === referenceChar) {
             charElement.classList.add("correct");
-            score ++
         } else {
             charElement.classList.add("incorrect");
-            error++; 
         }
     }
-    console.log(score)
-    console.log(error)
+    Accuracy()
 });
+}
+
+function Accuracy(score, error) {
+    const accuracyzone = document.getElementById("accuracy-zone") 
+    // const accuracy = ((score-error)/score)*100
+    accuracyzone.innerText = "Soon"
+
 }
 
 function WritePerMinute() {
