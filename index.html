@@ -1,42 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>TrainType</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>TrainType - Affichage Séquentiel Complet</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
     <header>
-        <nav>
-            <ul>
-                <div>
-                    <i class="fa-solid fa-keyboard" style="color: #13ec1a;"></i>
-                    <span>TrainType</span>
-                </div>
-                <ul>
-                    <a href="#">Défi</a>
-                    <a href="#">Découvrir</a>
-                    <a href="#">Contact</a>
-                </ul>
-                <div>
-                    <button>Log in</button>
-                    <button>Sign up</button>
-                </div>
-            </ul>
+        <a href="#hero-page" class="logo">
+            <i class="fa-solid fa-star"></i> 
+            <span>TrainType</span>
+        </a>
+        
+        <nav class="nav-unified">
+            <a href="#hero-page">Accueil</a>
+            <a href="#play-page" class="active-link">Jeu</a>
+            <a href="#discover-page">Découvrir</a>
+            <a href="#contact-page">Contact</a>
+            <a href="#hero-page" class="user-icon"><i class="fa-regular fa-circle-user"></i></a>
+            <a href="#hero-page" class="btn-signup">Sign up</a>
         </nav>
     </header>
-    <main>
-        <section>
-            <h1>TrainType</h1>
-            <button>Commencer</button>
-        </section>
-        <section>
-            
-        </section>
+
+    <main id="hero-page">
+        <h1 class="hero-title">TrainType</h1>
+        <a href="#discover-page" class="btn-start">
+            Commencer
+        </a>
     </main>
+
+    <main id="play-page">
+        
+        <div class="stats-container">
+            <div class="stats-card"><p>WPM</p><p>75</p></div>
+            <div class="stats-card"><p>Accuracy</p><p>98%</p></div>
+        </div>
+        
+        <div class="typing-area">
+            <span class="correct">Le texte déjà tapé correctement en</span> 
+            <span class="correct">vert,</span> 
+            <span class="remaining-text">ou en rouge si incorrect. Le mot actuel à taper est en</span> 
+            <span class="current-word">blanc</span> 
+            <span class="remaining-text">vif avec un curseur clignotant. Le reste du texte à venir est en blanc plus discret.</span>
+        </div>
+        
+        <div class="game-controls">
+            <button><i class="fa-solid fa-rotate-right"></i></button>
+            <button><i class="fa-solid fa-gear"></i></button>
+        </div>
+    </main>
+
+
+    <section id="discover-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Découvrir TrainType</h1>
+                <p>Explorez les différents modes de jeu et les fonctionnalités pour améliorer votre vitesse de frappe.</p>
+            </div>
+            <h2 class="section-title">Modes de Jeu</h2>
+            <div class="grid">
+                <div class="card"><img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Mode Classique" class="card-image"><div class="card-content"><h3>Mode Classique</h3><p>Testez votre vitesse et votre précision avec des textes standards.</p><a href="#play-page" class="card-action">Commencer</a></div></div>
+                <div class="card"><img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Mode Challenge" class="card-image"><div class="card-content"><h3>Mode Challenge</h3><p>Relevez des défis chronométrés ou basés sur la précision.</p><a href="#play-page" class="card-action">Explorer</a></div></div>
+                <div class="card"><img src="https://images.unsplash.com/photo-1587829741301-dc798b91add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Mots Ciblés" class="card-image"><div class="card-content"><h3>Mode Mots Ciblés</h3><p>Entraînez-vous sur des listes de mots spécifiques ou difficiles.</p><a href="#play-page" class="card-action">S'entraîner</a></div></div>
+            </div>
+            <h2 class="section-title">Apprentissage & Amélioration</h2>
+            <div class="grid">
+                <div class="card"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Tutoriels" class="card-image"><div class="card-content"><h3>Tutoriels pour Débutants</h3><p>Apprenez les bases de la dactylographie pour bien commencer.</p><a href="#play-page" class="card-action">Apprendre</a></div></div>
+                <div class="card"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Suivi Progrès" class="card-image"><div class="card-content"><h3>Suivi des Progrès</h3><p>Visualisez vos statistiques et suivez votre amélioration.</p><a href="#play-page" class="card-action">Voir mes stats</a></div></div>
+                <div class="card"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Personnaliser" class="card-image"><div class="card-content"><h3>Personnaliser</h3><p>Ajustez les thèmes et les paramètres à votre goût.</p><a href="#play-page" class="card-action">Configurer</a></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-page">
+        <div class="contact-content">
+            <h2>Get in Touch</h2>
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" class="input-field" placeholder="Enter your name"></div>
+                    <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" class="input-field" placeholder="Enter your email address"></div>
+                </div>
+                <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" class="textarea-field" placeholder="Enter your message"></textarea></div>
+                <button type="submit" class="btn-send">Send Message</button>
+            </form>
+            <p class="contact-alt">
+                Alternatively, you can email us directly at: 
+                <a href="mailto:contact@traintype.app">contact@traintype.app</a>
+            </p>
+        </div>
+    </section>
+
 </body>
 </html>
