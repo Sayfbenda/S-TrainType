@@ -59,33 +59,34 @@ function ParagrapheSplited(paragraphe) {
 function addEventListenerTokeyboard(paragraphe) {
     const typingarea = document.getElementById("typing-area")
     const userinput = document.getElementById("userinput")
-    userinput.addEventListener("keyup", function(e){
-        for (let index = 0; index < typingarea.children.length; index++) {
-            if (typingarea.children[index].classList.contains("correct")) {
-                    typingarea.children[index].classList.replace("correct", "remaining-text")
-                }else if(typingarea.children[index].classList.contains("incorrect")){
-                    typingarea.children[index].classList.replace("incorrect", "remaining-text")
-                }
+
+    userinput.addEventListener("keyup", function(e) {
+    let score = 0;
+    let error = 0;
+
+    for (let i = userinput.value.length; i < typingarea.children.length; i++) {
+        typingarea.children[i].classList.remove("correct", "incorrect");
+        typingarea.children[i].classList.add("remaining-text");
+    }
+
+    for (let i = 0; i < userinput.value.length; i++) {
+        const charElement = typingarea.children[i];
+        const typedChar = userinput.value[i];
+        const referenceChar = paragraphe[i];
+
+        charElement.classList.remove("correct", "incorrect", "remaining-text");
+
+        if (typedChar === referenceChar) {
+            charElement.classList.add("correct");
+            score ++
+        } else {
+            charElement.classList.add("incorrect");
+            error++; 
         }
-        for (let index = 0; index < userinput.value.length; index++) {
-            typingarea.children[index].classList.add("remaining-text")
-            if (userinput.value[index] == paragraphe[index]) {
-                
-                if (typingarea.children[index].classList.contains("incorrect")) {
-                    typingarea.children[index].classList.replace("incorrect", "correct")
-                }else{
-                    typingarea.children[index].classList.replace("remaining-text", "correct")
-                }
-            }else{
-                if (typingarea.children[index].classList.contains("correct")) {
-                    typingarea.children[index].classList.replace("correct", "incorrect")
-                }else{
-                    typingarea.children[index].classList.replace("remaining-text", "incorrect")
-                }
-            }
-            
-        }
-    })
+    }
+    console.log(score)
+    console.log(error)
+});
 }
 
 function WritePerMinute() {
